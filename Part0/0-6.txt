@@ -1,0 +1,27 @@
+note over browser:
+user writes a note and click on Save button
+end note
+
+note over browser:
+There is a POST request to the address new_note_spa
+that contains the input as JSON-data with
+both the content and a timestamp of the note.
+end note
+
+note over browser:
+the header of the request has a 
+content-type of application/json
+that tells server the format of 
+data: JSON format.
+end note
+
+
+note over browser:
+The event handler of the code creates a new note, 
+adds it to the notes list, rerenders the note list 
+on the page and sends the new note to the server.
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server-->browser: status 201 Created (does not ask for new HTTP GET requests)
+

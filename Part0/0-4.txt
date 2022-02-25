@@ -1,0 +1,29 @@
+note over browser:
+user writes a note and click 
+on Save button
+end note
+
+note over browser:
+the action attribute of the 
+HTML-code tells the browser
+to send the data to "/exampleapp/new_note"
+with the method "POST"
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+note over server:
+The server creates a new note object,
+and adds it to an array called notes.
+end note
+
+server-->browser: status 302 Found (asks for a new HTTP GET request)
+
+note over browser:
+the browser reloads the page doing
+all the GET requests again. But this time the data.json
+will have an updated array of objects that will be displayed.
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: the updated Array of objects

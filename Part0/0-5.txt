@@ -1,0 +1,23 @@
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->browser: HTML document
+
+note over browser:
+inside the HTML document there's a link
+for a css document called main.css and
+a javascript document called spa.js
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->browser: spa.js
+
+note over browser:
+the browser executes the js codes that has a 
+xMLHttpRequest for with "GET"
+and "/exampleapp/data.json" as attributes
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: data.json
