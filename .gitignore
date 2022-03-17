@@ -3,3 +3,5 @@ Part2/3datacountries/.env
 Part2/3datacountries/node_modules
 
 node_modules
+
+.env
